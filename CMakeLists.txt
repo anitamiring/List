@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.13)
+project(CodingDojo)
+include_directories(/usr/src/gtest/include)
+set(CMAKE_CXX_STANDARD 14)
+find_package(Threads REQUIRED)
+add_executable(CodingDojo main.cpp List.cpp List.h List_Test.cpp List_Test.h)
+target_link_libraries(CodingDojo gtest gtest_main)
+target_link_libraries(CodingDojo Threads::Threads)
